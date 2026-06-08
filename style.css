@@ -368,9 +368,6 @@ html, body {
     margin: 0;
     padding: 0;
     
-    /* Mencegah scrollbar muncul jika ada elemen yang sedikit lewat batas */
-    overflow: hidden; 
-    
     /* Tambahan untuk mobile: mencegah perubahan ukuran teks otomatis */
     -webkit-text-size-adjust: 100%;
     

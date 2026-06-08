@@ -21,87 +21,121 @@
         </marquee>
     </div>
 
-    <div class="grid-container">
+    
         
-        <div class="grid-item" onclick="toggleOverlay(this)">
-            <a href="https://www.google.com">
+        <center>
+    <button onclick="tampilkanSemuaItem()" style="padding: 12px 24px; background: #222; color: #fff; border: 2px solid #ff6600; border-radius: 8px; cursor: pointer; margin-top: 20px; margin-bottom: 20px; font-weight: bold; font-size: 16px;">
+        🔄 Tampilkan Semua Video
+    </button>
+</center>
+
+<div class="grid-container">
+    
+    <div class="grid-item" data-tag="kucing">
+        <a href="https://www.google.com" class="media-link">
+            <div class="video-wrapper">
                 <img alt="Gambar 1" src="https://images2.imgbox.com/f1/30/V3Xq7GcB_o.jpg"/>
                 <div class="video-overlay"><div class="play-icon"></div></div>
-            </a>
-            <p>Kucing Besar 1</p>
-        </div>
+            </div>
+        </a>
+        <a href="https://www.google.com" class="title-link"><p>Kucing Besar 1</p></a>
+        <button class="badge-tag" onclick="cariTag(event, 'kucing')">kucing</button>
+    </div>
 
-        <div class="grid-item" onclick="toggleOverlay(this)">
-            <a href="https://tmpigaspro.blogspot.com/2025/07/wartna-colkat.html?m=1#">
+    <div class="grid-item" data-tag="kucing">
+        <a href="https://tmpigaspro.blogspot.com/2025/07/wartna-colkat.html?m=1#" class="media-link">
+            <div class="video-wrapper">
                 <img alt="Gambar 2" src="https://images2.imgbox.com/f1/30/V3Xq7GcB_o.jpg"/>
                 <div class="video-overlay"><div class="play-icon"></div></div>
-                <p>Kucing Besar 2</p>
-            </a>
-        </div>
+            </div>
+        </a>
+        <a href="https://tmpigaspro.blogspot.com/2025/07/wartna-colkat.html?m=1#" class="title-link"><p>Kucing Besar 2</p></a>
+        <button class="badge-tag" onclick="cariTag(event, 'kucing')">kucing</button>
+    </div>
 
-        <div class="grid-item" onclick="toggleOverlay(this)">
-            <a href="https://tmpigaspro.blogspot.com/2025/07/wartna-colkat.html?m=1#">
+    <div class="grid-item" data-tag="macan">
+        <a href="https://tmpigaspro.blogspot.com/2025/07/wartna-colkat.html?m=1#" class="media-link">
+            <div class="video-wrapper">
                 <img alt="Gambar 3" src="https://images2.imgbox.com/f1/30/V3Xq7GcB_o.jpg"/>
                 <div class="video-overlay"><div class="play-icon"></div></div>
-                <p>Kucing Besar 3</p>
-            </a>
-        </div>
+            </div>
+        </a>
+        <a href="https://tmpigaspro.blogspot.com/2025/07/wartna-colkat.html?m=1#" class="title-link"><p>Kucing Besar 3</p></a>
+        <button class="badge-tag" onclick="cariTag(event, 'macan')">macan</button>
+    </div>
 
-        <div class="grid-item" onclick="toggleOverlay(this)">
-            <a href="https://tmpigaspro.blogspot.com/2025/07/wartna-colkat.html?m=1#">
+    <div class="grid-item" data-tag="singa">
+        <a href="https://tmpigaspro.blogspot.com/2025/07/wartna-colkat.html?m=1#" class="media-link">
+            <div class="video-wrapper">
                 <div class="thumbnail">
                     <img alt="Gambar 1" src="https://images2.imgbox.com/f1/30/V3Xq7GcB_o.jpg"/>
                     <div class="video-overlay"><div class="play-icon"></div></div>
                 </div>
-            </a>
-            <a href="https://tmpigaspro.blogspot.com/2025/07/wartna-colkat.html?m=1#">
-                <p class="video-title">Uji Kucing Besar 4 Yos Bagus Tikus Tikus Keluar 30 Yung Bihira Mag Simba Pero Madalas Naman Lumuhod sa Boyfriend Niya. HIHI</p>
-            </a>
-        </div>
+            </div>
+        </a>
+        <a href="https://tmpigaspro.blogspot.com/2025/07/wartna-colkat.html?m=1#" class="title-link"><p class="video-title">Uji Kucing Besar 4 Yos Bagus Tikus Tikus Keluar 30 Yung Bihira Mag Simba Pero Madalas Naman Lumuhod sa Boyfriend Niya. HIHI</p></a>
+        <button class="badge-tag" onclick="cariTag(event, 'singa')">singa</button>
+    </div>
 
-        <div class="grid-item" onclick="toggleOverlay(this)">
-            <a href="https://www.google.com">
+    <div class="grid-item" data-tag="kucing">
+        <a href="https://www.google.com" class="media-link">
+            <div class="video-wrapper">
                 <img alt="Gambar 1" src="https://images2.imgbox.com/f1/30/V3Xq7GcB_o.jpg"/>
                 <div class="video-overlay"><div class="play-icon"></div></div>
-            </a>
-            <p>Kucing Besar 5</p>
-        </div>
+            </div>
+        </a>
+        <a href="https://www.google.com" class="title-link"><p>Kucing Besar 5</p></a>
+        <button class="badge-tag" onclick="cariTag(event, 'kucing')">kucing</button>
+    </div>
 
-        <div class="grid-item" onclick="toggleOverlay(this)">
-            <a href="https://www.google.com">
+    <div class="grid-item" data-tag="macan">
+        <a href="https://www.google.com" class="media-link">
+            <div class="video-wrapper">
                 <img alt="Gambar 1" src="https://images2.imgbox.com/f1/30/V3Xq7GcB_o.jpg"/>
                 <div class="video-overlay"><div class="play-icon"></div></div>
-            </a>
-            <p>Kucing Besar 6</p>
-        </div>            
-        
-        <div class="grid-item" onclick="toggleOverlay(this)">
-            <a href="https://tmpigaspro.blogspot.com/2025/07/wartna-colkat.html?m=1#">
+            </div>
+        </a>
+        <a href="https://www.google.com" class="title-link"><p>Kucing Besar 6</p></a>
+        <button class="badge-tag" onclick="cariTag(event, 'macan')">macan</button>
+    </div>            
+    
+    <div class="grid-item" data-tag="singa">
+        <a href="https://tmpigaspro.blogspot.com/2025/07/wartna-colkat.html?m=1#" class="media-link">
+            <div class="video-wrapper">
                 <div class="thumbnail">
                     <img alt="Gambar 300" src="https://images2.imgbox.com/f1/30/V3Xq7GcB_o.jpg"/>
                     <div class="video-overlay"><div class="play-icon"></div></div>
                 </div>
-            </a>
-            <a href="https://tmpigaspro.blogspot.com/2025/07/wartna-colkat.html?m=1#">
-                <p class="video-title">Uji Kucing Besar 7000 Yos Bagus Kucing Besar 7yang Bihira Mag Simba Pero Madalas Naman Lumuhod sa Boyfriend Niya. HIHI</p>
-            </a>
-        </div> 
+            </div>
+        </a>
+        <a href="https://tmpigaspro.blogspot.com/2025/07/wartna-colkat.html?m=1#" class="title-link"><p class="video-title">Uji Kucing Besar 7000 Yos Bagus Kucing Besar 7yang Bihira Mag Simba Pero Madalas Naman Lumuhod sa Boyfriend Niya. HIHI</p></a>
+        <button class="badge-tag" onclick="cariTag(event, 'singa')">singa</button>
+    </div> 
 
-        <div class="grid-item" onclick="toggleOverlay(this)">
-            <a href="https://www.google.com">
+    <div class="grid-item" data-tag="kucing">
+        <a href="https://www.google.com" class="media-link">
+            <div class="video-wrapper">
                 <img alt="Gambar 1" src="https://images2.imgbox.com/f1/30/V3Xq7GcB_o.jpg"/>
                 <div class="video-overlay"><div class="play-icon"></div></div>
-            </a>
-            <p>Kucing Besar 8</p>
-        </div>
+            </div>
+        </a>
+        <a href="https://www.google.com" class="title-link"><p>Kucing Besar 8</p></a>
+        <button class="badge-tag" onclick="cariTag(event, 'kucing')">kucing</button>
+    </div>
 
-        <div class="grid-item" onclick="toggleOverlay(this)">
-            <a href="https://www.google.com">
+    <div class="grid-item" data-tag="macan">
+        <a href="https://www.google.com" class="media-link">
+            <div class="video-wrapper">
                 <img alt="Gambar 1" src="https://images2.imgbox.com/f1/30/V3Xq7GcB_o.jpg"/>
                 <div class="video-overlay"><div class="play-icon"></div></div>
-            </a>
-            <p>Kucing Besar 9</p>
-        </div>
+            </div>
+        </a>
+        <a href="https://www.google.com" class="title-link"><p>Kucing Besar 9</p></a>
+        <button class="badge-tag" onclick="cariTag(event, 'macan')">macan</button>
+    </div>
+
+</div>
+        
 
     </div>
 

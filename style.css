@@ -311,3 +311,48 @@ a:hover {
   text-decoration: underline !important;
   color: #ff6600 !important; /* Judul ikut berubah jadi orange saat disorot */
 }
+
+/* Menjaga tampilan judul agar tetap rapi saat menjadi link aktif */
+.title-link {
+  text-decoration: none !important;
+  color: #ffffff !important;
+  display: inline-block;
+  margin-top: 5px;
+  width: 100%;
+}
+
+.title-link:hover p, 
+.title-link:hover .video-title {
+  text-decoration: underline !important; /* Memberi efek garis bawah tipis saat disorot mouse */
+  color: #ff6600 !important; /* Mengubah teks judul menjadi orange saat kursor komputer menyorotnya */
+}
+
+
+/* Pembungkus area video agar terpisah dari area tombol tag */
+.video-wrapper {
+  position: relative;
+  width: 100%;
+  cursor: pointer;
+}
+
+/* Tombol tag baru menggunakan elemen button asli */
+.badge-tag {
+  display: inline-block;
+  background-color: #ff6600 !important;
+  color: #ffffff !important;
+  font-size: 14px;
+  font-weight: bold;
+  text-transform: uppercase;
+  padding: 6px 16px;
+  border-radius: 4px;
+  margin-top: 10px;
+  border: none !important;
+  cursor: pointer !important;
+  position: relative;
+  z-index: 9999; /* Dipaksa berada di urutan paling atas agar mutlak bisa ditekan komputer */
+  transition: background 0.2s;
+}
+
+.badge-tag:hover {
+  background-color: #cc5200 !important;
+}

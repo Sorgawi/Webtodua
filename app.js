@@ -88,3 +88,48 @@ window.addEventListener('load', function() {
     initIklan();
     initPopupAds();
 });
+
+
+// Fungsi memunculkan overlay video saat area gambar disorot/interaksi
+function toggleOverlay(el) {
+    let overlay = el.querySelector('.video-overlay');
+    if (!overlay) return;
+
+    if (overlay.classList.contains('show')) {
+        overlay.classList.remove('show');
+        return;
+    }
+
+    document.querySelectorAll('.video-overlay').forEach(function(o) {
+        o.classList.remove('show');
+    });
+
+    overlay.classList.add('show');
+}
+
+// Fungsi FILTER BERDASARKAN TAG (Tetap Akurat)
+function cariTag(event, kataKunci) {
+    event.stopPropagation();
+    event.preventDefault();
+
+    let semuaItem = document.querySelectorAll('.grid-item');
+
+    semuaItem.forEach(function(item) {
+        let tagData = item.getAttribute('data-tag');
+
+        if (tagData === kataKunci) {
+            item.style.display = 'block';
+        } else {
+            item.style.display = 'none';
+        }
+    });
+}
+
+// Fungsi reset filter
+function tampilkanSemuaItem() {
+    let semuaItem = document.querySelectorAll('.grid-item');
+    semuaItem.forEach(function(item) {
+        item.style.display = 'block';
+    });
+}
+

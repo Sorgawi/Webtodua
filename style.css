@@ -283,3 +283,31 @@ a:hover {
   from { transform: scale(0.8); opacity: 0; }
   to { transform: scale(1); opacity: 1; }
 }
+
+
+/* Menghilangkan garis atau dekorasi default pada link gambar */
+.media-link {
+  display: block;
+  text-decoration: none !important;
+  width: 100%;
+}
+
+/* Efek keren saat kursor komputer menyorot area gambar */
+.media-link:hover .video-overlay {
+  opacity: 1; /* Otomatis memunculkan tombol play saat gambar disorot mouse */
+}
+
+/* Style link judul */
+.title-link {
+  text-decoration: none !important;
+  color: #ffffff !important;
+  display: inline-block;
+  margin-top: 5px;
+  width: 100%;
+}
+
+.title-link:hover p, 
+.title-link:hover .video-title {
+  text-decoration: underline !important;
+  color: #ff6600 !important; /* Judul ikut berubah jadi orange saat disorot */
+}

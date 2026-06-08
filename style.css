@@ -1,0 +1,285 @@
+/* Reset & Base Style */
+body {
+  font-family: Arial, sans-serif;
+  background: #000;
+  color: #fff;
+  margin: 0;
+  padding: 0;
+  padding-bottom: 120px; /* Jarak agar konten tidak tertutup fixed pagination bar */
+}
+
+/* Header Sticky Jumbo */
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background-color: #111;
+  padding: 45px 20px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  border-bottom: 2px solid #444;
+}
+.header a {
+  background-color: #444;
+  color: white;
+  padding: 24px 50px;
+  font-size: 30px;
+  font-weight: bold;
+  border-radius: 12px;
+  text-decoration: none;
+  display: inline-block;
+}
+.header a:hover {
+  background-color: #666;
+}
+
+/* Grid Container */
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+  width: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+}
+.grid-item {
+  text-align: center;
+  padding: 10px;
+  border: 1px solid #444;
+  border-radius: 5px;
+  background-color: #111;
+  position: relative;
+  cursor: pointer;
+  overflow: hidden;
+}
+.grid-item img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 5px;
+}
+.grid-item p {
+  font-size: 22px;
+  font-weight: bold;
+  margin-top: 8px;
+  color: #fff;
+}
+a {
+  color: #fff;
+}
+a:hover {
+  text-decoration: underline;
+}
+
+/* Overlay Video */
+.video-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  pointer-events: none; 
+  transition: opacity 0.3s ease;
+}
+.video-overlay.show {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* Posisi vertikal overlay */
+.video-overlay.top { align-items: flex-start; }
+.video-overlay.center { align-items: center; }
+.video-overlay.bottom { align-items: flex-end; }
+
+/* Ikon Play */
+.play-icon {
+  width: 70px;
+  height: 70px;
+  background: rgba(255,255,255,0.9);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.play-icon:before {
+  content: '';
+  display: block;
+  width: 0;
+  height: 0;
+  border-left: 20px solid #000;
+  border-top: 12px solid transparent;
+  border-bottom: 12px solid transparent;
+}
+
+/* Sembunyikan garis bawah link dalam grid-item */
+.grid-item a,
+.grid-item a:link,
+.grid-item a:visited,
+.grid-item a:hover,
+.grid-item a:active {
+  text-decoration: none !important;
+  color: inherit;
+}
+
+/* Thumbnail & Title */
+.thumbnail {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  border-radius: 5px;
+}
+.video-title {
+  font-size: 20px;
+  font-weight: bold;
+  margin-top: 10px;
+  color: #fff;
+  text-align: center;
+}
+
+/* Pagination Bar Fixed di bawah */
+.pagination-bar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: #111;
+  padding: 15px 0 5px 0;
+  text-align: center;
+  border-top: 3px solid #444;
+  z-index: 9999;
+}
+.pagination-bar .page-btn {
+  display: inline-block;
+  margin: 0 8px;
+  padding: 15px 28px;
+  font-size: 22px;
+  font-weight: bold;
+  border-radius: 10px;
+  text-decoration: none;
+  background: #f2f2f2;
+  color: #333;
+  transition: 0.3s;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+}
+.pagination-bar .page-btn:hover {
+  background: #333;
+  color: #fff;
+}
+.pagination-bar .page-btn.active {
+  background: #ff6600;
+  color: #fff;
+}
+.pagination-bar .made-in {
+  margin-top: 10px;
+  font-size: 14px;
+  color: #aaa;
+}
+
+/* Style Utama Modal Iklan Hitam */
+#modal-iklan-hitam {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 9999; 
+  width: auto; 
+  max-width: 450px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.8); 
+  border-radius: 12px;
+  opacity: 0; 
+  transition: opacity 0.3s ease-in-out;
+}
+.iklan-konten-hitam {
+  background-color: #000000; 
+  border: 3px solid #000000; 
+  padding: 0;
+  border-radius: 12px;
+  overflow: hidden; 
+  position: relative;
+}
+.tutup-iklan-merah {
+  color: #ffffff; 
+  background-color: #ff0000; 
+  font-size: 18px; 
+  font-weight: bold;
+  position: absolute;
+  top: 0px; 
+  right: 0px; 
+  cursor: pointer;
+  line-height: 30px; 
+  text-align: center;
+  width: 30px; 
+  height: 30px; 
+  border-radius: 50%;
+  z-index: 10000; 
+  transition: background-color 0.2s;
+}
+.tutup-iklan-merah:hover {
+  background-color: #cc0000;
+}
+#countdown-timer {
+  display: block;
+  width: 100%;
+  background-color: #000000;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: normal;
+  padding: 5px 0;
+  text-align: center;
+  z-index: 10000;
+}
+#countdown-timer strong {
+  color: #ffcc00;
+  font-weight: bold;
+}
+.iklan-gambar-hitam {
+  display: block;
+  width: 100%; 
+  height: auto;
+}
+
+/* Popup Ads Bawah */
+.popup-ads {
+  display: none;
+  position: fixed;
+  z-index: 9999;
+  inset: 0;
+  background: rgba(0,0,0,0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.popup-content {
+  background: #040720;
+  padding: 25px;
+  border-radius: 14px;
+  width: 600px;
+  max-width: 95%;
+  text-align: center;
+  position: relative;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.5);
+  animation: popupScale 0.35s ease;
+}
+.popup-content img {
+  max-height: 400px;
+  object-fit: cover;
+}
+.popup-content .close {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 28px;
+  cursor: pointer;
+  color: #fff;
+}
+@keyframes popupScale {
+  from { transform: scale(0.8); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}

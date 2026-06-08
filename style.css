@@ -358,23 +358,4 @@ a:hover {
 }
 
 
-/* Agar Bagus Tampilan Halaman*/
-html, body {
-    width: 100%;
-    height: 100%;
-    /* Gunakan dynamic viewport height agar pas di HP meski ada address bar browser */
-    height: 100dvh; 
-    
-    margin: 0;
-    padding: 0;
-    
-    /* Tambahan untuk mobile: mencegah perubahan ukuran teks otomatis */
-    -webkit-text-size-adjust: 100%;
-    
-    /* Memastikan padding/border tidak menambah ukuran elemen */
-    box-sizing: border-box;
-}
 
-*, *:before, *:after {
-    box-sizing: inherit;
-}

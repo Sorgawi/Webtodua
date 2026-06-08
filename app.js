@@ -1,22 +1,4 @@
-// --- LOGIKA PLAY/OVERLAY VIDEO ---
-function toggleOverlay(el) {
-    let overlay = el.querySelector('.video-overlay');
-    if (!overlay) return;
 
-    // Jika overlay yang diklik sudah aktif -> sembunyikan
-    if (overlay.classList.contains('show')) {
-        overlay.classList.remove('show');
-        return;
-    }
-
-    // Hilangkan overlay aktif di gambar lain terlebih dahulu
-    document.querySelectorAll('.video-overlay').forEach(function(o) {
-        o.classList.remove('show');
-    });
-
-    // Tampilkan overlay di gambar yang diklik
-    overlay.classList.add('show');
-}
 
 // --- LOGIKA MODAL IKLAN HITAM (COUNTDOWN) ---
 var iklanHitam = document.getElementById('modal-iklan-hitam');
@@ -108,6 +90,7 @@ function toggleOverlay(el) {
 }
 
 // Fungsi FILTER BERDASARKAN TAG (Tetap Akurat)
+// LOGIKA FILTER DENGAN FITUR MULTI-TAG BERKOMA
 function cariTag(event, kataKunci) {
     event.stopPropagation();
     event.preventDefault();
@@ -116,16 +99,24 @@ function cariTag(event, kataKunci) {
 
     semuaItem.forEach(function(item) {
         let tagData = item.getAttribute('data-tag');
+        
+        if (tagData) {
+            // Memecah tag berkoma ("kucing, macan" menjadi ["kucing", "macan"])
+            let daftarTag = tagData.split(',').map(function(tag) {
+                return tag.trim().toLowerCase();
+            });
 
-        if (tagData === kataKunci) {
-            item.style.display = 'block';
-        } else {
-            item.style.display = 'none';
+// Periksa jika kata kunci yang dicari terdaftar di array
+            if (daftarTag.includes(kataKunci.toLowerCase())) {
+                item.style.display = 'block';
+            } else {
+                item.style.display = 'none';
+            }
         }
     });
 }
 
-// Fungsi reset filter
+// Fungsi mereset filter
 function tampilkanSemuaItem() {
     let semuaItem = document.querySelectorAll('.grid-item');
     semuaItem.forEach(function(item) {
